@@ -59,9 +59,10 @@ class Calibration(val profiles: List<FloatArray>, val levelDb: Float) {
             val acc = FloatArray(NUM_BANDS)
             for (f in frames) {
                 val m = f.bandDb.average().toFloat()
-                for (i in 0 until NUM_BANDS) acc[i] += f.bandDb[i] - m
+                for (i in 0 until NUM_BANDS) acc[i] = acc[i] + (f.bandDb[i] - m)
             }
-            for (i in acc.indices) acc[i] /= frames.size
+            val n = frames.size.toFloat()
+            for (i in acc.indices) acc[i] = acc[i] / n
             val levels = frames.map { it.rmsDb }.sorted()
             return Pair(acc, levels[levels.size / 2])
         }

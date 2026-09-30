@@ -55,8 +55,8 @@ object SignalGen {
         val out = x.copyOf()
         for (i in 0 until m) {
             val g = i.toDouble() / m
-            out[i] *= g
-            out[out.size - 1 - i] *= g
+            out[i] = out[i] * g
+            out[out.size - 1 - i] = out[out.size - 1 - i] * g
         }
         return out
     }
@@ -90,12 +90,12 @@ object SignalGen {
         }
         for (k in hmin..hmax) {
             if (k * f0 * 1.1 >= SR / 2.0) continue
-            for (i in 0 until n) x[i] += (1.0 / k) * sin(k * ph[i])
+            for (i in 0 until n) x[i] = x[i] + (1.0 / k) * sin(k * ph[i])
         }
         for (i in 0 until n) {
             val t = i.toDouble() / SR
             val env = 0.55 + 0.45 * sin(2.0 * PI * amHz * t)
-            x[i] *= env
+            x[i] = x[i] * env
         }
         return fade(dbfs(x, db), 15.0)
     }
@@ -130,7 +130,7 @@ object SignalGen {
         for (s in 0 until steps) {
             val f = lo + (hi - lo) * s / steps
             val phase = rnd.nextDouble(0.0, 2.0 * PI)
-            for (i in 0 until n) x[i] += sin(2.0 * PI * f * i / SR + phase)
+            for (i in 0 until n) x[i] = x[i] + sin(2.0 * PI * f * i / SR + phase)
         }
         return fade(dbfs(x, db))
     }
@@ -140,7 +140,7 @@ object SignalGen {
         val i0 = (atSec * SR).toInt()
         for (i in event.indices) {
             if (i0 + i >= out.size) break
-            out[i0 + i] += event[i]
+            out[i0 + i] = out[i0 + i] + event[i]
         }
         return out
     }

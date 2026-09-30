@@ -52,8 +52,8 @@ class Fft(val size: Int) {
                     val xi = re[j + half] * wi + im[j + half] * wr
                     re[j + half] = re[j] - xr
                     im[j + half] = im[j] - xi
-                    re[j] += xr
-                    im[j] += xi
+                    re[j] = re[j] + xr
+                    im[j] = im[j] + xi
                     k += step
                 }
                 i += len

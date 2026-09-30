@@ -251,7 +251,7 @@ class CallDetector(
         var mean = 0f
         for (v in f.bandDb) mean += v
         mean /= NUM_BANDS
-        for (i in 0 until NUM_BANDS) sShape[i] += f.bandDb[i] - mean
+        for (i in 0 until NUM_BANDS) sShape[i] = sShape[i] + (f.bandDb[i] - mean)
     }
 
     private fun stepCandidate(f: FrameFeatures) {
