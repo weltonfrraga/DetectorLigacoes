@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Detector de Ligações</string>
+
+    <!-- Tela principal -->
+    <string name="status_stopped">🔴 Desligado</string>
+    <string name="status_monitoring">🟢 Monitorando</string>
+    <string name="status_alerting">🚨 LIGAÇÃO DETECTADA</string>
+    <string name="action_start_monitoring">▶ INICIAR MONITORAMENTO</string>
+    <string name="action_stop_monitoring">⏹ PARAR MONITORAMENTO</string>
+    <string name="duration_format">Monitorando há %1$d min %2$d s</string>
+    <string name="level_format">Nível do microfone: %1$.0f dBFS  (piso de ruído: %2$.0f dBFS)</string>
+    <string name="level_warming_up">Calibrando o ruído de fundo…</string>
+    <string name="mic_closed">Microfone: fechado</string>
+    <string name="mic_open_format">Microfone: aberto (fonte: %1$s)</string>
+    <string name="sensitivity_format">Sensibilidade atual: %1$s</string>
+    <string name="action_change_sensitivity">Alterar sensibilidade</string>
+    <string name="sensitivity_dialog_title">Escolha a sensibilidade</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="step_switch_label">Experimental: detectar ligação silenciosa (chiado de linha)</string>
+    <string name="step_switch_warning">Fica desligado por padrão: observa um aumento sustentado do ruído de fundo por 4 s. Pode confundir com mudanças reais do ambiente (geladeira, ar-condicionado etc.). Ative só se testar e achar útil no seu caso.</string>
+    <string name="action_test_alert">🔔 TESTAR ALERTA</string>
+    <string name="action_open_diagnostic">Tela de diagnóstico</string>
+    <string name="action_ignore_battery_optimization">Ignorar otimização de bateria (recomendado)</string>
+    <string name="toast_need_mic_permission">É preciso permitir o uso do microfone para monitorar.</string>
+    <string name="main_privacy_notice">Privacidade: todo o processamento de áudio acontece no aparelho. O app nunca grava, guarda nem envia o som captado — cada trecho é analisado e descartado na hora.</string>
+
+    <!-- Alerta -->
+    <string name="alert_title">📞 LIGAÇÃO DETECTADA</string>
+    <string name="alert_title_test">🔔 TESTE DE ALERTA</string>
+    <string name="alert_reason_test">Este é um teste manual — nenhum evento real foi detectado.</string>
+    <string name="action_dismiss_alert">DESLIGAR ALERTA</string>
+
+    <!-- Diagnóstico -->
+    <string name="diagnostic_title">Diagnóstico</string>
+    <string name="diag_state_format">Fase do app: %1$s   |   Estado do detector: %2$s</string>
+    <string name="diag_no_data_format">Fase do app: %1$s   |   ainda sem dados de áudio</string>
+    <string name="diag_score_format">Confiança do candidato atual: %1$.2f   |   melhor vista: %2$.2f   |   limiar: %3$.2f</string>
+    <string name="diag_mic_format">Fonte: %1$s   |   Microfone: %2$s   |   Quadros processados: %3$d   |   Silêncio digital contínuo: %4$d ms</string>
+    <string name="mic_state_open">aberto</string>
+    <string name="mic_state_closed">fechado</string>
+    <string name="diag_config_format">Config. (%1$s): %2$s</string>
+    <string name="diag_events_title">Histórico de eventos</string>
+    <string name="action_clear_history">Limpar</string>
+    <string name="diag_no_events">Nenhum evento ainda.</string>
+
+    <!-- Canais de notificação -->
+    <string name="ch_monitor_name">Monitoramento ativo</string>
+    <string name="ch_monitor_desc">Notificação persistente enquanto o app está ouvindo o microfone.</string>
+    <string name="ch_alert_name">Alerta de ligação</string>
+    <string name="ch_alert_desc">Alerta de tela cheia quando um evento compatível com ligação é detectado.</string>
+    <string name="ch_status_name">Avisos do app</string>
+    <string name="ch_status_desc">Avisos sobre problemas no monitoramento (ex.: falha ao abrir o microfone).</string>
+    <string name="notif_monitoring_title">Monitorando o microfone</string>
+    <string name="notif_monitoring_text">Ouvindo em busca do início de uma ligação no headset.</string>
+    <string name="notif_alert_fgs_title">Alerta de ligação ativo</string>
+    <string name="notif_alert_fgs_text">Toque para abrir a tela de alerta.</string>
+    <string name="notif_problem_title">Monitoramento interrompido</string>
+    <string name="action_stop">Parar</string>
+    <string name="action_dismiss">Desligar alerta</string>
+</resources>

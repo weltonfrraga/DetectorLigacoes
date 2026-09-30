@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ícone placeholder: fone de ouvido branco sobre círculo. Substitua por uma arte final antes de publicar. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,24c-14.91,0 -27,12.09 -27,27v16c0,3.31 2.69,6 6,6h4v-22h-6v-2c0,-12.7 9.3,-22 23,-22s23,9.3 23,22v2h-6v22h4c4.97,0 9,-4.03 9,-9v-13C84,36.09 68.91,24 54,24z" />
+</vector>

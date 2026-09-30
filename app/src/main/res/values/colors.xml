@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_primary">#1B5E20</color>
+    <color name="brand_primary_dark">#0F3D14</color>
+    <color name="brand_accent">#C40000</color>
+</resources>

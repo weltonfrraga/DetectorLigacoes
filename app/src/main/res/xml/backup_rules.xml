@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Nada sensível é salvo em backup automático: apenas preferências de sensibilidade/calibração numérica. -->
+<full-backup-content>
+    <include domain="sharedpref" path="call_detector.xml" />
+</full-backup-content>

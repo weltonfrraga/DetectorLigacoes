@@ -1,0 +1,19 @@
+Falta aqui o arquivo binário gradle-wrapper.jar.
+
+Ele não pôde ser baixado durante a geração deste projeto (ambiente sem acesso à rede).
+Sem ele, ./gradlew ainda não funciona sozinho.
+
+Como resolver (escolha uma opção):
+
+1) Abra a pasta do projeto no Android Studio. Ele detecta o wrapper incompleto e oferece para
+   regenerá-lo automaticamente. Se não perguntar, vá em: File > Sync Project with Gradle Files.
+
+2) Se você já tem o Gradle instalado na sua máquina (gradle --version), rode UMA VEZ dentro da
+   pasta raiz do projeto (a que tem settings.gradle.kts):
+
+       gradle wrapper --gradle-version 8.7
+
+   Isso cria este gradle-wrapper.jar. Depois disso, use normalmente ./gradlew (Linux/Mac) ou
+   gradlew.bat (Windows) para compilar pela linha de comando.
+
+Veja também a seção 1 do README.md na raiz do projeto.
